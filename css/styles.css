@@ -445,6 +445,7 @@ body {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .logo-footer {
@@ -513,6 +514,65 @@ body {
 .footer-soc-icon {
   fill: var(--cloud);
 }
+
+.footer-subsc-wrap {
+  width: 453px;
+  margin-left: 80px;
+}
+
+.footer-subsc-name {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+/* .footer-subsc-label {
+} */
+
+.footer-subsc-input {
+  position: absolute;
+  width: 264px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: var(--white);
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+}
+
+::placeholder {
+  color: var(--white);
+}
+
+.footer-subsc-button {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 165px;
+  height: 40px;
+  margin-left: 288px;
+  border-radius: 4px;
+  border: transparent;
+  background-color: var(--iris);
+  color: var(--white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-subsc-button:focus,
+.footer-subsc-button:hover {
+  background-color: var(--ocean);
+}
+
+/* .footer-subsc-button-icon {
+} */
 
 /*-------------------------- Portfolio page --------------------------*/
 
@@ -655,7 +715,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 300ms linear;
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .backdrop.is-hidden .modal {
@@ -690,6 +750,20 @@ body {
   justify-content: center;
   margin: auto;
   background-color: transparent;
+}
+
+.modal-form {
+}
+
+.form-group {
+}
+
+.form-group p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
 .is-hidden {

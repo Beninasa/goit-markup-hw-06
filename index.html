@@ -447,6 +447,26 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subsc-wrap">
+          <p class="footer-subsc-name">Subscribe</p>
+          <form>
+            <label class="footer-subsc-label">
+              <input
+                type="email"
+                class="footer-subsc-input"
+                placeholder="E-mail"
+                name="user_email"
+                required
+              />
+            </label>
+            <button type="submit" class="footer-subsc-button">
+              Subscribe
+              <svg class="footer-subsc-button-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -457,6 +477,37 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <form class="modal-form">
+          <div class="form-group" role="group" aria-labelledby="contact-head">
+            <p id="contact-head">
+              Leave your contacts and we will call you back
+            </p>
+            <label>
+              Name
+              <input type="text" name="name" />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="number" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" />
+            </label>
+            <label>
+              Comement
+              <textarea name="comement" cols="30" rows="10">
+                Text input
+              </textarea>
+            </label>
+            <input type="checkbox" />
+            <label
+              >I accept the terms and conditions of the
+              <a href="">Privacy Policy</a></label
+            >
+            <button type="submit">Send</button>
+          </div>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
