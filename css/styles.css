@@ -544,6 +544,7 @@ body {
   line-height: 2;
   letter-spacing: 0.04em;
   padding-left: 16px;
+  outline: none;
 }
 
 .footer-subsc-input::placeholder {
@@ -774,40 +775,95 @@ body {
 }
 
 .input-wrap {
+  position: relative;
+  display: flex;
 }
 
 .modal-input {
   width: 100%;
   height: 40px;
   margin-bottom: 8px;
+  border: 1px solid rgba(46, 47, 66, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  padding-left: 38px;
+  color: var(--navy-blue);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+  border-color: var(--iris);
+  outline: none;
 }
 
 .modal-input-icon {
+  display: block;
   position: absolute;
+  left: 16px;
+  top: 15px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus + .modal-input-icon {
+  fill: var(--iris);
 }
 
 .modal-textarea {
   width: 360px;
   height: 120px;
-  opacity: 0.2;
-  border: 1px solid #2e2f42;
+  border: 1px solid rgba(46, 47, 66, 0.2);
   border-radius: 4px;
   margin-bottom: 16px;
+  margin-top: 4px;
+  padding: 8px 16px;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:focus {
+  border-color: var(--iris);
+  outline: none;
+}
+
+.modal-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .modal-checkbox-wrap {
-  display: flex;
 }
 
 .modal-checkbox {
-  margin-right: 8px;
+  display: flex;
+  align-items: center;
 }
 
 .modal-policy {
+  display: flex;
+  align-items: center;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.04em;
   color: var(--light-slate);
+}
+
+.modal-policy::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--navy-blue);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.modal-checkbox:checked + .modal-policy::before {
+  background-color: var(--ocean);
+  fill: var(--cloud);
+  background-image: url(../images/click.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: transparent;
 }
 
 .modal-policy-link {
